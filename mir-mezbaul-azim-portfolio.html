@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mir Mezbaul Azim — Google Ads Specialist & Digital Marketing Expert. Scale your business with high-converting ad campaigns.">
+<meta name="keywords" content="Google Ads, Digital Marketing, PPC, Campaign Optimization, Keyword Research, ROI">
+<title>Mir Mezbaul Azim | Google Ads Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050509;
+    --bg2: #080812;
+    --surface: #0d0d1a;
+    --surface2: #12122a;
+    --border: rgba(120,80,255,0.15);
+    --purple: #7c3aed;
+    --purple-light: #a855f7;
+    --blue: #2563eb;
+    --blue-light: #60a5fa;
+    --cyan: #06b6d4;
+    --glow: rgba(124,58,237,0.35);
+    --glow2: rgba(96,165,250,0.25);
+    --text: #f0eeff;
+    --muted: #8878aa;
+    --accent: #c084fc;
+    --gold: #f59e0b;
+    --success: #10b981;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ─── CUSTOM CURSOR ─── */
+  .cursor {
+    width: 12px; height: 12px;
+    background: var(--purple-light);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.15s, background 0.2s, width 0.2s, height 0.2s;
+    mix-blend-mode: screen;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid rgba(168,85,247,0.6);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: all 0.12s ease;
+  }
+  body:has(a:hover) .cursor,
+  body:has(button:hover) .cursor { width: 20px; height: 20px; background: var(--accent); }
+  body:has(a:hover) .cursor-ring,
+  body:has(button:hover) .cursor-ring { width: 52px; height: 52px; border-color: var(--accent); }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg2); }
+  ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 4px; }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(5,5,9,0.75);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.7rem; letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--purple-light), var(--blue-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative; transition: color 0.25s;
+    cursor: pointer;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1.5px;
+    background: linear-gradient(90deg, var(--purple-light), var(--cyan));
+    transition: width 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--text); }
+  .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: #fff; border: none; padding: 10px 24px;
+    border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 18px rgba(124,58,237,0.4);
+  }
+  .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 0 30px rgba(124,58,237,0.6); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 26px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding: 100px 5% 60px;
+  }
+
+  /* BG orbs */
+  .orb {
+    position: absolute; border-radius: 50%;
+    filter: blur(100px); pointer-events: none;
+    animation: drift 10s ease-in-out infinite alternate;
+  }
+  .orb1 { width: 600px; height: 600px; background: rgba(124,58,237,0.18); top: -100px; left: -150px; }
+  .orb2 { width: 500px; height: 500px; background: rgba(37,99,235,0.15); bottom: -80px; right: -100px; animation-delay: -4s; }
+  .orb3 { width: 300px; height: 300px; background: rgba(6,182,212,0.1); top: 40%; left: 50%; animation-delay: -7s; }
+  @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(30px,20px) scale(1.08); } }
+
+  /* Grid lines */
+  .grid-lines {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(120,80,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,80,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-inner {
+    display: flex; align-items: center; gap: 6rem;
+    max-width: 1200px; width: 100%;
+    position: relative; z-index: 2;
+  }
+  .hero-text { flex: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 30px; padding: 6px 16px;
+    font-size: 0.78rem; font-family: var(--font-mono);
+    color: var(--purple-light); letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    animation: fadeSlideUp 0.8s ease both;
+  }
+  .hero-badge .dot {
+    width: 7px; height: 7px;
+    background: var(--success); border-radius: 50%;
+    box-shadow: 0 0 6px var(--success);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  .hero-greeting {
+    font-size: 1.1rem; color: var(--muted);
+    font-weight: 400; letter-spacing: 0.5px;
+    animation: fadeSlideUp 0.8s 0.1s ease both;
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.95; letter-spacing: 2px;
+    background: linear-gradient(135deg, #fff 20%, var(--purple-light) 60%, var(--blue-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: fadeSlideUp 0.8s 0.2s ease both;
+    margin-bottom: 0.5rem;
+  }
+  .hero-title {
+    font-size: 1.15rem; font-weight: 500;
+    color: var(--accent); letter-spacing: 0.3px;
+    animation: fadeSlideUp 0.8s 0.3s ease both;
+    margin-bottom: 1.2rem;
+  }
+  .hero-tagline {
+    font-size: 1.05rem; color: var(--muted);
+    max-width: 480px; line-height: 1.8;
+    animation: fadeSlideUp 0.8s 0.4s ease both;
+    margin-bottom: 2.5rem;
+  }
+  .hero-tagline strong { color: var(--text); font-weight: 600; }
+
+  .hero-btns {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s 0.5s ease both;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: #fff; border: none; padding: 14px 32px;
+    border-radius: 8px; font-size: 0.95rem; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 0 25px rgba(124,58,237,0.5);
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::before {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(124,58,237,0.7); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text); border: 1.5px solid rgba(120,80,255,0.4);
+    padding: 14px 32px; border-radius: 8px;
+    font-size: 0.95rem; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.25s;
+  }
+  .btn-outline:hover {
+    border-color: var(--purple-light);
+    background: rgba(124,58,237,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(124,58,237,0.2);
+  }
+
+  /* Hero stats */
+  .hero-stats {
+    display: flex; gap: 2rem; margin-top: 3rem;
+    animation: fadeSlideUp 0.8s 0.6s ease both;
+  }
+  .stat { text-align: left; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem; letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--purple-light), var(--blue-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.5px; }
+  .stat-divider { width: 1px; background: var(--border); }
+
+  /* Hero image */
+  .hero-img-wrap {
+    position: relative; flex-shrink: 0;
+    animation: fadeSlideUp 0.8s 0.3s ease both;
+  }
+  .hero-img-ring {
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--purple), var(--blue), var(--cyan), var(--purple));
+    padding: 4px;
+    animation: spin 4s linear infinite;
+    box-shadow: 0 0 60px rgba(124,58,237,0.5), 0 0 120px rgba(37,99,235,0.3);
+  }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .hero-img-inner {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--surface) 30%, var(--surface2));
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; animation: spin 4s linear infinite reverse;
+  }
+  .hero-img-inner svg { width: 65%; height: 65%; opacity: 0.9; }
+  .hero-img-glow {
+    position: absolute; inset: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
+    animation: breathe 1s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes breathe { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 100px 5%; position: relative; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.78rem; color: var(--purple-light);
+    letter-spacing: 3px; text-transform: uppercase;
+    display: block; margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #fff, var(--muted));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .section-line {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--cyan));
+    margin: 16px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ─── ABOUT ─── */
+  #about { background: var(--bg2); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; max-width: 1100px; margin: 0 auto;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .about-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--purple-light), transparent);
+  }
+  .about-avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 2rem; color: #fff; margin-bottom: 1rem;
+    box-shadow: 0 0 30px rgba(124,58,237,0.5);
+  }
+  .about-name-card { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+  .about-role-card { font-size: 0.85rem; color: var(--accent); font-family: var(--font-mono); }
+
+  .info-items { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .info-item {
+    display: flex; justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(120,80,255,0.1);
+    font-size: 0.9rem;
+  }
+  .info-item span:first-child { color: var(--muted); }
+  .info-item span:last-child { color: var(--text); font-weight: 500; }
+
+  .floating-badge {
+    position: absolute; right: -20px; top: 30px;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    border-radius: 12px; padding: 12px 20px;
+    text-align: center; box-shadow: 0 8px 30px rgba(124,58,237,0.4);
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .floating-badge .num { font-family: var(--font-display); font-size: 1.8rem; }
+  .floating-badge .lbl { font-size: 0.7rem; opacity: 0.8; }
+
+  .about-text h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+  .about-text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.9; }
+  .about-text p strong { color: var(--text); }
+
+  .about-highlights { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+  .highlight-chip {
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 30px; padding: 6px 16px;
+    font-size: 0.82rem; color: var(--purple-light);
+    font-family: var(--font-mono);
+  }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--bg); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+  }
+  .service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 2.2rem;
+    cursor: pointer; position: relative; overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  .service-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(124,58,237,0.07), rgba(37,99,235,0.07));
+    opacity: 0; transition: opacity 0.35s;
+  }
+  .service-card::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--cyan));
+    transform: scaleX(0); transition: transform 0.35s;
+    transform-origin: left;
+  }
+  .service-card:hover { border-color: rgba(124,58,237,0.4); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(124,58,237,0.15); }
+  .service-card:hover::before { opacity: 1; }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-card:active { transform: translateY(-3px) scale(0.99); }
+
+  .service-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; margin-bottom: 1.3rem;
+    position: relative; z-index: 1;
+  }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.7rem; position: relative; z-index: 1; }
+  .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.8; position: relative; z-index: 1; }
+
+  .service-arrow {
+    margin-top: 1.2rem; font-size: 0.8rem;
+    color: var(--purple-light); font-family: var(--font-mono);
+    display: flex; align-items: center; gap: 6px;
+    opacity: 0; transform: translateX(-8px);
+    transition: all 0.3s; position: relative; z-index: 1;
+  }
+  .service-card:hover .service-arrow { opacity: 1; transform: translateX(0); }
+
+  /* ─── PORTFOLIO ─── */
+  #portfolio { background: var(--bg2); }
+  .portfolio-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+  }
+  .project-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden; cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    position: relative;
+  }
+  .project-card:hover { transform: translateY(-8px); border-color: rgba(124,58,237,0.4); box-shadow: 0 25px 70px rgba(0,0,0,0.5), 0 0 40px rgba(124,58,237,0.12); }
+  .project-card:active { transform: translateY(-4px) scale(0.99); }
+
+  .project-thumb {
+    height: 190px; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .project-thumb-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; transition: opacity 0.3s;
+    font-size: 0.9rem; font-weight: 600; gap: 8px;
+    color: #fff;
+  }
+  .project-card:hover .project-thumb-overlay { opacity: 1; }
+
+  .project-body { padding: 1.5rem; }
+  .project-tag {
+    font-family: var(--font-mono); font-size: 0.72rem;
+    color: var(--cyan); letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .project-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.8rem; }
+  .project-stats {
+    display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;
+  }
+  .pstat {
+    display: flex; flex-direction: column;
+    padding: 0.6rem 0.9rem;
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(124,58,237,0.2);
+    border-radius: 8px; text-align: center; flex: 1;
+  }
+  .pstat strong { font-family: var(--font-display); font-size: 1.2rem; color: var(--purple-light); }
+  .pstat span { font-size: 0.7rem; color: var(--muted); }
+
+  /* ─── MODAL ─── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 500;
+    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+    align-items: center; justify-content: center; padding: 20px;
+  }
+  .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 20px; max-width: 680px; width: 100%;
+    padding: 2.5rem; position: relative;
+    animation: slideUp 0.3s ease;
+    max-height: 90vh; overflow-y: auto;
+  }
+  @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .modal-close {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: rgba(120,80,255,0.15); border: 1px solid var(--border);
+    color: var(--text); width: 36px; height: 36px;
+    border-radius: 50%; cursor: pointer; font-size: 1.2rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .modal-close:hover { background: rgba(120,80,255,0.3); }
+
+  /* ─── SKILLS ─── */
+  #skills { background: var(--bg); }
+  .skills-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; max-width: 1000px; margin: 0 auto;
+  }
+  .skill-item { margin-bottom: 1.4rem; }
+  .skill-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: 500; }
+  .skill-pct { color: var(--purple-light); font-family: var(--font-mono); font-size: 0.82rem; }
+  .skill-bar {
+    height: 6px; background: rgba(255,255,255,0.06);
+    border-radius: 3px; overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--purple), var(--blue-light));
+    border-radius: 3px; width: 0;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 0 10px rgba(124,58,237,0.5);
+  }
+  .skills-tools { margin-top: 3rem; text-align: center; max-width: 1000px; margin-left: auto; margin-right: auto; }
+  .skills-tools h3 { font-size: 1rem; color: var(--muted); margin-bottom: 1.2rem; letter-spacing: 1px; }
+  .tools-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+  .tool-chip {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 18px;
+    font-size: 0.85rem; font-family: var(--font-mono);
+    color: var(--muted); cursor: default;
+    transition: all 0.25s;
+  }
+  .tool-chip:hover { border-color: var(--purple-light); color: var(--purple-light); background: rgba(124,58,237,0.08); transform: translateY(-2px); }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials { background: var(--bg2); overflow: hidden; }
+  .testimonial-slider { max-width: 900px; margin: 0 auto; position: relative; }
+  .testimonial-track { overflow: hidden; }
+  .testimonial-inner { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .testimonial-card {
+    min-width: 100%; padding: 0 10px;
+  }
+  .tcard {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 20px; padding: 2.5rem;
+    position: relative;
+  }
+  .tcard::before {
+    content: '"';
+    position: absolute; top: 1rem; left: 1.5rem;
+    font-size: 5rem; line-height: 1;
+    font-family: Georgia, serif;
+    color: rgba(124,58,237,0.2);
+    pointer-events: none;
+  }
+  .tcard p { font-size: 1rem; line-height: 1.9; color: var(--muted); margin-bottom: 1.5rem; font-style: italic; }
+  .t-author { display: flex; align-items: center; gap: 1rem; }
+  .t-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1.1rem; color: #fff;
+    flex-shrink: 0;
+  }
+  .t-name { font-weight: 700; font-size: 0.95rem; }
+  .t-role { font-size: 0.8rem; color: var(--muted); }
+  .stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-top: 0.3rem; }
+
+  .slider-controls { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem; }
+  .slider-btn {
+    width: 44px; height: 44px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 50%; cursor: pointer; color: var(--text);
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.25s;
+  }
+  .slider-btn:hover { background: var(--purple); border-color: var(--purple); }
+  .slider-dots { display: flex; gap: 6px; }
+  .dot-btn {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--border); border: none; cursor: pointer;
+    transition: all 0.25s; padding: 0;
+  }
+  .dot-btn.active { background: var(--purple-light); width: 24px; border-radius: 4px; }
+
+  /* ─── RESUME ─── */
+  #resume { background: var(--bg); }
+  .resume-wrap {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  }
+  .resume-col h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; }
+  .resume-col h3 span { font-size: 1.2rem; }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 12px; top: 8px; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, var(--purple), transparent);
+  }
+  .tl-item { padding-left: 36px; position: relative; margin-bottom: 1.8rem; }
+  .tl-dot {
+    position: absolute; left: 7px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--purple); border: 2px solid var(--bg);
+    box-shadow: 0 0 8px rgba(124,58,237,0.6);
+  }
+  .tl-date { font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan); letter-spacing: 1px; margin-bottom: 4px; }
+  .tl-title { font-size: 0.95rem; font-weight: 700; }
+  .tl-org { font-size: 0.82rem; color: var(--muted); }
+
+  .resume-cta { text-align: center; margin-top: 3rem; grid-column: 1/-1; }
+  .btn-download {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: #fff; text-decoration: none; padding: 16px 40px;
+    border-radius: 8px; font-weight: 700; font-size: 1rem;
+    transition: all 0.25s;
+    box-shadow: 0 0 30px rgba(124,58,237,0.4);
+  }
+  .btn-download:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(124,58,237,0.6); }
+  .btn-download svg { width: 20px; height: 20px; }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--bg2); }
+  .contact-wrap {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 4rem; max-width: 1000px; margin: 0 auto;
+    align-items: start;
+  }
+  .contact-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; }
+  .contact-info p { color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+  .contact-items { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-item {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--border);
+    text-decoration: none; color: var(--text);
+    transition: all 0.25s;
+  }
+  .contact-item:hover { border-color: var(--purple-light); background: rgba(124,58,237,0.08); transform: translateX(4px); }
+  .contact-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .contact-item-text { font-size: 0.88rem; }
+  .contact-item-text small { color: var(--muted); font-size: 0.75rem; }
+
+  .socials { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+  .social-btn {
+    width: 44px; height: 44px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    text-decoration: none; color: var(--muted);
+    font-size: 1.1rem; transition: all 0.25s;
+    cursor: pointer;
+  }
+  .social-btn:hover { background: rgba(124,58,237,0.15); border-color: var(--purple-light); color: var(--purple-light); transform: translateY(-3px); }
+
+  /* Contact form */
+  .contact-form-wrap {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 20px; padding: 2.5rem;
+  }
+  .contact-form-wrap h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.5px; }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%; background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 14px;
+    color: var(--text); font-family: var(--font-body); font-size: 0.9rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    outline: none; resize: vertical;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .form-group textarea { min-height: 120px; }
+  .form-group select option { background: var(--surface2); }
+
+  .btn-submit {
+    width: 100%; background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: #fff; border: none; padding: 15px;
+    border-radius: 8px; font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; transition: all 0.25s;
+    box-shadow: 0 0 25px rgba(124,58,237,0.35);
+    position: relative; overflow: hidden;
+  }
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(124,58,237,0.55); }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit.loading { opacity: 0.7; pointer-events: none; }
+
+  .form-success {
+    display: none; text-align: center; padding: 2rem;
+  }
+  .form-success.show { display: block; animation: fadeSlideUp 0.5s ease; }
+  .form-success .check { font-size: 3rem; margin-bottom: 1rem; }
+  .form-success h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .form-success p { color: var(--muted); font-size: 0.9rem; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bg); border-top: 1px solid var(--border);
+    padding: 2rem 5%; text-align: center;
+  }
+  footer p { color: var(--muted); font-size: 0.82rem; }
+  footer a { color: var(--purple-light); text-decoration: none; }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── BACK TO TOP ─── */
+  .back-top {
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    border: none; color: #fff; font-size: 1.1rem;
+    cursor: pointer; z-index: 50;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(124,58,237,0.4);
+    transition: all 0.25s; opacity: 0; transform: translateY(20px);
+  }
+  .back-top.visible { opacity: 1; transform: translateY(0); }
+  .back-top:hover { transform: translateY(-4px); }
+
+  /* ─── MOBILE NAV ─── */
+  .mobile-menu {
+    display: none; position: fixed; inset: 0;
+    background: rgba(5,5,9,0.97); backdrop-filter: blur(20px);
+    z-index: 99; flex-direction: column;
+    align-items: center; justify-content: center; gap: 2rem;
+  }
+  .mobile-menu.open { display: flex; animation: fadeIn 0.2s; }
+  .mobile-menu a {
+    font-family: var(--font-display); font-size: 2rem;
+    letter-spacing: 3px; color: var(--text); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--purple-light); }
+  .mobile-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none; color: var(--text);
+    font-size: 1.8rem; cursor: pointer;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-inner { flex-direction: column; text-align: center; gap: 3rem; }
+    .hero-img-ring { width: 260px; height: 260px; }
+    .hero-btns { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-tagline { margin: 0 auto 2.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .floating-badge { right: 0; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .resume-wrap { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+  }
+
+  /* Colored service icons */
+  .si-1 { background: rgba(124,58,237,0.15); }
+  .si-2 { background: rgba(37,99,235,0.15); }
+  .si-3 { background: rgba(6,182,212,0.15); }
+  .si-4 { background: rgba(16,185,129,0.15); }
+  .si-5 { background: rgba(245,158,11,0.15); }
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="scrollTo(0,0)">MMA</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobile()">✕</button>
+  <a href="#about" onclick="toggleMobile()">About</a>
+  <a href="#services" onclick="toggleMobile()">Services</a>
+  <a href="#portfolio" onclick="toggleMobile()">Portfolio</a>
+  <a href="#skills" onclick="toggleMobile()">Skills</a>
+  <a href="#testimonials" onclick="toggleMobile()">Reviews</a>
+  <a href="#resume" onclick="toggleMobile()">Resume</a>
+  <a href="#contact" onclick="toggleMobile()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="grid-lines"></div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><div class="dot"></div> Available for Projects</div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Mir Mezbaul<br>Azim</h1>
+      <p class="hero-title">Google Ads Specialist & Digital Marketing Expert</p>
+      <p class="hero-tagline">I help businesses <strong>scale with high-converting ad campaigns</strong> — turning ad spend into measurable, profitable growth.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToSection('portfolio')">⚡ View Projects</button>
+        <button class="btn-outline" onclick="scrollToSection('contact')">→ Hire Me</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Campaigns Managed</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><div class="stat-num">3.8×</div><div class="stat-label">Average ROAS</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><div class="stat-num">$2M+</div><div class="stat-label">Ad Spend Managed</div></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img-glow"></div>
+      <div class="hero-img-ring">
+        <div class="hero-img-inner">
+          <img src="./image/Azim.png" style="width:100%; height:100%; object-fit:cover; object-position:center top ; border-radius:30%; margin-left: 25px;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-tag">// who i am</span>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-card">
+        <div class="about-avatar" style="padding:0;overflow:hidden;"><img src="./image/Azim.png" style=" width: 70px;margin-left: 5px; margin-top: 20px;" /></div>
+        <div class="about-name-card">Mir Mezbaul Azim</div>
+        <div class="about-role-card">Google Ads Specialist</div>
+        <div class="info-items">
+          <div class="info-item"><span>📍 Location</span><span>Dhaka, Bangladesh</span></div>
+          <div class="info-item"><span>🎓 Certified</span><span>Google Ads Certified</span></div>
+          <div class="info-item"><span>💼 Experience</span><span>5+ Years</span></div>
+          <div class="info-item"><span>🌐 Languages</span><span>Bengali, English</span></div>
+          <div class="info-item"><span>⚡ Status</span><span style="color:var(--success)">● Open to Work</span></div>
+        </div>
+      </div>
+      <div class="floating-badge">
+        <div class="num">98%</div>
+        <div class="lbl">Client Retention</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <h3>Turning Ad Spend Into<br>Real Business Growth</h3>
+      <p>I'm a <strong>Google Ads Specialist</strong> with 5+ years of hands-on experience running high-budget PPC campaigns across e-commerce, SaaS, healthcare, and local services. I specialize in crafting laser-targeted campaigns that don't just get clicks — they get <strong>conversions</strong>.</p>
+      <p>My approach is <strong>data-first</strong>. Every decision I make is backed by analytics, A/B testing, and a deep understanding of user intent. I've managed over <strong>$2 million in ad spend</strong> and consistently delivered above-average ROAS for clients ranging from startups to established brands.</p>
+      <p>Whether you need to launch a brand-new campaign, recover a struggling account, or scale an existing one profitably — I'm the specialist who makes it happen.</p>
+      <div class="about-highlights">
+        <span class="highlight-chip">Google Search Ads</span>
+        <span class="highlight-chip">Performance Max</span>
+        <span class="highlight-chip">Shopping Campaigns</span>
+        <span class="highlight-chip">Remarketing</span>
+        <span class="highlight-chip">Display & YouTube</span>
+        <span class="highlight-chip">A/B Testing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="section-header reveal">
+    <span class="section-tag">// what i offer</span>
+    <h2 class="section-title">Services</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="services-grid reveal" id="servicesGrid">
+
+    <div class="service-card" onclick="openService('Google Ads Campaign Setup','End-to-end Google Ads campaign setup including account structure, ad groups, targeting, ad copywriting, bidding strategy, and full QA before launch. I set up campaigns the right way the first time.')">
+      <div class="service-icon si-1">🚀</div>
+      <h3>Google Ads Campaign Setup</h3>
+      <p>Full account structuring, keyword mapping, ad copy creation, audience targeting, and bidding strategy configuration. Built to convert from day one.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+    <div class="service-card" onclick="openService('Campaign Optimization','Systematic review and optimization of existing campaigns — reducing wasted spend, improving Quality Scores, testing ad variations, and fine-tuning bids to maximize ROI.')">
+      <div class="service-icon si-2">⚙️</div>
+      <h3>Campaign Optimization</h3>
+      <p>In-depth audits and ongoing optimization to reduce wasted budget, improve CTR, and boost conversion rates across all campaign types.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+    <div class="service-card" onclick="openService('Keyword Research','Deep keyword research using advanced tools and competitor analysis to find high-intent, low-competition terms that your competitors are missing.')">
+      <div class="service-icon si-3">🔍</div>
+      <h3>Keyword Research</h3>
+      <p>Strategic keyword discovery using intent-based analysis, competitor gap research, and negative keyword curation to maximize relevance and minimize waste.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+    <div class="service-card" onclick="openService('Conversion Tracking','Precise Google Analytics 4 and Google Tag Manager setup to track every meaningful action — purchases, leads, calls, and micro-conversions — with 100% accuracy.')">
+      <div class="service-icon si-4">📊</div>
+      <h3>Conversion Tracking</h3>
+      <p>GA4, GTM, and Google Ads conversion tracking setup to ensure every click, lead, and purchase is accurately attributed and measurable.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+    <div class="service-card" onclick="openService('ROI Scaling','Once campaigns are profitable, I scale strategically — expanding to new audiences, increasing budgets methodically, and maintaining CPA targets as you grow.')">
+      <div class="service-icon si-5">📈</div>
+      <h3>ROI Scaling</h3>
+      <p>Proven frameworks to scale profitable campaigns without blowing up your CPA. I help you grow ad spend while keeping returns consistent and predictable.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+    <div class="service-card" onclick="openService('Monthly Reporting & Strategy','Comprehensive monthly performance reports with clear insights, actionable recommendations, and a forward-looking strategy roadmap.')">
+      <div class="service-icon si-1">📋</div>
+      <h3>Monthly Reporting</h3>
+      <p>Clear, executive-level performance reports with visual dashboards, KPI analysis, and a strategic 30-day roadmap to keep growth on track.</p>
+      <div class="service-arrow">→ Learn More</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section id="portfolio">
+  <div class="section-header reveal">
+    <span class="section-tag">// case studies</span>
+    <h2 class="section-title">Portfolio</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="portfolio-grid reveal">
+
+    <div class="project-card" onclick="openProject(0)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #1a0533, #0f172a);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(168,85,247,0.8)" font-size="28" font-family="sans-serif">🛒</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">E-Commerce · Google Shopping</div>
+        <h3>Fashion Brand: 4.2× ROAS in 90 Days</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>4.2×</strong><span>ROAS</span></div>
+          <div class="pstat"><strong>-38%</strong><span>CPC Drop</span></div>
+          <div class="pstat"><strong>2,400+</strong><span>Conversions</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(1)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0c1a33, #071220);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(96,165,250,0.8)" font-size="28" font-family="sans-serif">💼</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">B2B SaaS · Search Campaigns</div>
+        <h3>65% Lower CPL via Search</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>-65%</strong><span>CPL</span></div>
+          <div class="pstat"><strong>$1.80</strong><span>CPC</span></div>
+          <div class="pstat"><strong>340</strong><span>Leads</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(2)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0d2018, #091a14);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(16,185,129,0.8)" font-size="28" font-family="sans-serif">🏥</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Healthcare · Local Services</div>
+        <h3>3× Patient Bookings via Local Ads</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>3×</strong><span>Bookings</span></div>
+          <div class="pstat"><strong>$12</strong><span>CPL</span></div>
+          <div class="pstat"><strong>94%</strong><span>Impression</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(3)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #1f1209, #120c04);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(245,158,11,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(245,158,11,0.8)" font-size="28" font-family="sans-serif">🏠</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">Real Estate · Performance Max</div>
+        <h3>280% Lead Surge with PMax</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>+280%</strong><span>Leads</span></div>
+          <div class="pstat"><strong>$28</strong><span>CPL</span></div>
+          <div class="pstat"><strong>5.1×</strong><span>ROAS</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(4)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0f1a2e, #060e1c);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(6,182,212,0.8)" font-size="28" font-family="sans-serif">📱</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">App Install · UAC Campaign</div>
+        <h3>10K+ Installs at $0.60 CPI</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>10K+</strong><span>Installs</span></div>
+          <div class="pstat"><strong>$0.60</strong><span>CPI</span></div>
+          <div class="pstat"><strong>42%</strong><span>Retention</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(5)">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #1a1020, #0d0812);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="30" stroke="rgba(192,132,252,0.4)" stroke-width="1.5"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="rgba(192,132,252,0.8)" font-size="28" font-family="sans-serif">🎓</text></svg>
+        <div class="project-thumb-overlay">👁 View Case Study</div>
+      </div>
+      <div class="project-body">
+        <div class="project-tag">EdTech · Remarketing</div>
+        <h3>5× Enrollment via Remarketing</h3>
+        <div class="project-stats">
+          <div class="pstat"><strong>5×</strong><span>Enrollment</span></div>
+          <div class="pstat"><strong>18%</strong><span>CVR</span></div>
+          <div class="pstat"><strong>$8</strong><span>CPA</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-header reveal">
+    <span class="section-tag">// expertise</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid reveal" id="skillsGrid">
+    <div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Google Search Ads</span><span class="skill-pct">97%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="97"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Performance Max</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Google Shopping</span><span class="skill-pct">93%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="93"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>YouTube Ads</span><span class="skill-pct">85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Display & Remarketing</span><span class="skill-pct">92%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Google Analytics 4</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Conversion Tracking / GTM</span><span class="skill-pct">95%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Keyword Strategy</span><span class="skill-pct">98%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="98"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>A/B Testing</span><span class="skill-pct">88%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label"><span>Landing Page Optimization</span><span class="skill-pct">82%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="skills-tools reveal" style="margin-top:3rem">
+    <h3>TOOLS & PLATFORMS</h3>
+    <div class="tools-row">
+      <div class="tool-chip">Google Ads</div>
+      <div class="tool-chip">Google Analytics 4</div>
+      <div class="tool-chip">Google Tag Manager</div>
+      <div class="tool-chip">Merchant Center</div>
+      <div class="tool-chip">SEMrush</div>
+      <div class="tool-chip">Ahrefs</div>
+      <div class="tool-chip">Looker Studio</div>
+      <div class="tool-chip">Hotjar</div>
+      <div class="tool-chip">Unbounce</div>
+      <div class="tool-chip">HubSpot</div>
+      <div class="tool-chip">Zapier</div>
+      <div class="tool-chip">Notion</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="section-header reveal">
+    <span class="section-tag">// what clients say</span>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="testimonial-slider reveal">
+    <div class="testimonial-track">
+      <div class="testimonial-inner" id="tSlider">
+
+        <div class="testimonial-card">
+          <div class="tcard">
+            <p>Azim completely transformed our Google Ads performance. Within 60 days, our cost per acquisition dropped by 52% and our ROAS jumped from 1.8× to 4.2×. He doesn't just manage campaigns — he engineers growth. Absolutely worth every penny and more.</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#7c3aed,#2563eb)">RS</div>
+              <div>
+                <div class="t-name">Rafid Sultan</div>
+                <div class="t-role">CEO, StyleHive Bangladesh</div>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="tcard">
+            <p>We hired Azim to overhaul our underperforming SaaS campaigns. He restructured everything, rebuilt our keyword strategy from scratch, and cut our CPL by 65% in just 3 months. His reporting is crystal clear and his communication is top-notch. Highly recommended.</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#0284c7,#06b6d4)">NJ</div>
+              <div>
+                <div class="t-name">Nadia Jahan</div>
+                <div class="t-role">Marketing Director, DataFlow SaaS</div>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="tcard">
+            <p>From day one, Azim showed a level of professionalism and expertise that I hadn't found in any other Google Ads specialist. He set up our entire tracking infrastructure, launched our campaigns, and we saw 3× more patient bookings within the first month. Exceptional!</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#059669,#10b981)">DK</div>
+              <div>
+                <div class="t-name">Dr. Kamal Hossain</div>
+                <div class="t-role">Owner, CareFirst Clinic</div>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="tcard">
+            <p>Azim's Performance Max strategy for our real estate listings was a game-changer. We went from 40 leads/month to 150+ and our cost per lead dropped significantly. He's proactive, data-driven, and genuinely invested in our success. We won't use anyone else.</p>
+            <div class="t-author">
+              <div class="t-avatar" style="background:linear-gradient(135deg,#d97706,#f59e0b)">TI</div>
+              <div>
+                <div class="t-name">Tanvir Islam</div>
+                <div class="t-role">Sales Manager, PropVista BD</div>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" onclick="slide(-1)">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" onclick="slide(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESUME ── -->
+<section id="resume">
+  <div class="section-header reveal">
+    <span class="section-tag">// my journey</span>
+    <h2 class="section-title">Resume</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="resume-wrap reveal">
+    <div class="resume-col">
+      <h3><span>💼</span> Work Experience</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2022 – PRESENT</div>
+          <div class="tl-title">Senior Google Ads Specialist</div>
+          <div class="tl-org">Freelance / Self-Employed</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2020 – 2022</div>
+          <div class="tl-title">PPC Campaign Manager</div>
+          <div class="tl-org">DigitalEdge Agency, Dhaka</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2019 – 2020</div>
+          <div class="tl-title">Digital Marketing Executive</div>
+          <div class="tl-org">TechBridge Solutions</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2018 – 2019</div>
+          <div class="tl-title">Marketing Intern</div>
+          <div class="tl-org">StartupBD Accelerator</div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-col">
+      <h3><span>🎓</span> Education & Certifications</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2024</div>
+          <div class="tl-title">Google Ads Search Certification</div>
+          <div class="tl-org">Google Skillshop</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2024</div>
+          <div class="tl-title">Performance Max Certification</div>
+          <div class="tl-org">Google Skillshop</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2023</div>
+          <div class="tl-title">Google Analytics 4 Certified</div>
+          <div class="tl-org">Google Skillshop</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2018</div>
+          <div class="tl-title">BSc in Marketing</div>
+          <div class="tl-org">University of Dhaka</div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-cta">
+
+      <!-- ============================================================
+           👇 তোমার CV PDF ফাইলের নাম এখানে বসাও
+           ফাইলটা এই HTML ফাইলের পাশে একই ফোল্ডারে রাখো
+           উদাহরণ: "Mir_Mezbaul_Azim_CV.pdf"
+           ============================================================ -->
+      <a class="btn-download" href="./file/Mir_Mezbaul_Azim.pdf" download="Mir_Mezbaul_Azim_CV.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 15V3M7 10l5 5 5-5"/><path d="M3 20h18"/></svg>
+        Download CV
+      </a>
+      <p style="color:var(--muted); font-size:0.8rem; margin-top:1rem">PDF format · Updated 2024</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-header reveal">
+    <span class="section-tag">// get in touch</span>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <h3>Let's Build Something<br>That Converts.</h3>
+      <p>Whether you need a new campaign launched, an underperforming account fixed, or a long-term growth partner — I'm ready. Let's talk about your goals.</p>
+      <div class="contact-items">
+        <a class="contact-item" href="mailto:mezbaulazimworks@gmail.com">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-item-text"><div>mezbaulazimworks@gmail.com</div><small>Email me directly</small></div>
+        </a>
+        <a class="contact-item" href="https://wa.me/+8801611746377" target="_blank">
+          <div class="contact-icon">💬</div>
+          <div class="contact-item-text"><div>+8801611746377</div><small>WhatsApp / Direct Call</small></div>
+        </a>
+        <a class="contact-item" href="#" target="_blank">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-item-text"><div>Dhaka, Bangladesh</div><small>Available Remotely Worldwide</small></div>
+        </a>
+      </div>
+      <div class="socials">
+        <a class="social-btn" href="https://www.linkedin.com/in/mirmezbaulazim" target="_blank" title="LinkedIn">
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg> -->
+           <img src="./image/linkedin.png" alt="" style="width: 18;" height="18">
+        </a>
+        <a class="social-btn" href="https://twitter.com" target="_blank" title="Twitter / X">
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> -->
+           <img src="./image/twitter.png" alt="" style="width: 18;" height="18">
+        </a>
+        <a class="social-btn" href="https://www.facebook.com/mirmezbaul" target="_blank" title="Facebook">
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> -->
+           <img src="./image/facebook.png" alt="" style="width: 18;" height="18">
+        </a>
+        <a class="social-btn" href="https://upwork.com" target="_blank" title="Upwork">
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><text x="50%" y="70%" text-anchor="middle" font-size="13" font-weight="700" font-family="sans-serif">U</text></svg> -->
+           <img src="./image/upwork.png" alt="" style="width: 22;" height="22">
+        </a>
+        <a class="social-btn" href="https://www.fiverr.com/mirmezbaulazim" target="_blank" title="Fiverr">
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><text x="50%" y="70%" text-anchor="middle" font-size="13" font-weight="700" font-family="sans-serif">F</text></svg> -->
+           <img src="./image/fiverr.png" alt="" style="width: 18;" height="18">
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h3>Send Me a Message</h3>
+      <div id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" id="fname" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lname" placeholder="Doe">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="femail" placeholder="john@company.com" required>
+        </div>
+        <!-- <div class="form-group">
+          <label>Budget Range</label>
+          <select id="fbudget">
+            <option value="">Select your budget</option>
+            <option>$500 – $1,000 / month</option>
+            <option>$1,000 – $3,000 / month</option>
+            <option>$3,000 – $10,000 / month</option>
+            <option>$10,000+ / month</option>
+          </select>
+        </div> -->
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea id="fmessage" placeholder="Tell me about your business, current challenges, and what you're hoping to achieve with Google Ads..." required></textarea>
+        </div>
+        <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+          🚀 Send Message
+        </button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✅</div>
+        <h4>Message Sent!</h4>
+        <p>Thank you for reaching out. I'll review your message and get back to you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 <a href="#">Mir Mezbaul Azim</a>. Google Ads Specialist & Digital Marketing Expert.</p>
+  <p style="margin-top:0.4rem">Crafted with precision · Built to convert</p>
+</footer>
+
+<!-- ── BACK TO TOP ── -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ── SERVICE MODAL ── -->
+<div class="modal-overlay" id="serviceModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('serviceModal')">✕</button>
+    <div style="margin-bottom:1rem; font-size:0.78rem; color:var(--cyan); font-family:var(--font-mono); letter-spacing:2px">// SERVICE</div>
+    <h2 id="sModalTitle" style="font-size:1.5rem;font-weight:700;margin-bottom:1rem"></h2>
+    <p id="sModalDesc" style="color:var(--muted); line-height:1.9; margin-bottom:1.5rem"></p>
+    <p style="color:var(--muted); font-size:0.9rem; line-height:1.8; margin-bottom:1.5rem">This service includes a full strategy consultation, campaign setup or audit, and ongoing support for the duration of the engagement. All deliverables are documented and reported on a regular basis.</p>
+    <button class="btn-primary" onclick="closeModal('serviceModal'); scrollToSection('contact')">Get Started →</button>
+  </div>
+</div>
+
+<!-- ── PROJECT MODAL ── -->
+<div class="modal-overlay" id="projectModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('projectModal')">✕</button>
+    <div id="pModalContent"></div>
+  </div>
+</div>
+
+<script>
+// ─── CURSOR ───
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  setTimeout(() => { ring.style.left = e.clientX + 'px'; ring.style.top = e.clientY + 'px'; }, 60);
+});
+
+// ─── NAV ACTIVE ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// ─── SMOOTH SCROLL ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ─── MOBILE MENU ───
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ─── BACK TO TOP ───
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  backTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ─── SCROLL REVEAL ───
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ─── SKILL BARS ───
+const skillObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill').forEach(fill => {
+        fill.style.width = fill.dataset.pct + '%';
+      });
+      skillObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const skillGrid = document.getElementById('skillsGrid');
+if (skillGrid) skillObs.observe(skillGrid);
+
+// ─── TESTIMONIAL SLIDER ───
+let current = 0;
+const total = 4;
+const tSlider = document.getElementById('tSlider');
+const dotsWrap = document.getElementById('sliderDots');
+
+// Build dots
+for (let i = 0; i < total; i++) {
+  const d = document.createElement('button');
+  d.className = 'dot-btn' + (i === 0 ? ' active' : '');
+  d.onclick = () => goSlide(i);
+  dotsWrap.appendChild(d);
+}
+
+function goSlide(n) {
+  current = (n + total) % total;
+  tSlider.style.transform = `translateX(-${current * 100}%)`;
+  document.querySelectorAll('.dot-btn').forEach((d, i) => d.classList.toggle('active', i === current));
+}
+function slide(dir) { goSlide(current + dir); }
+
+// Auto-slide
+setInterval(() => slide(1), 5000);
+
+// ─── MODAL HELPERS ───
+function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; }
+document.querySelectorAll('.modal-overlay').forEach(m => {
+  m.addEventListener('click', e => { if (e.target === m) closeModal(m.id); });
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal('serviceModal'); closeModal('projectModal'); }
+});
+
+function openService(title, desc) {
+  document.getElementById('sModalTitle').textContent = title;
+  document.getElementById('sModalDesc').textContent = desc;
+  openModal('serviceModal');
+}
+
+const projects = [
+  {
+    tag: 'E-Commerce · Google Shopping', title: 'Fashion Brand: 4.2× ROAS in 90 Days',
+    challenge: 'A Dhaka-based fashion brand had an average ROAS of 1.6× with a heavily fragmented ad account structure and no negative keyword lists.',
+    solution: 'Restructured campaigns by product category, implemented Smart Bidding with target ROAS, built an extensive negative keyword library, and launched a remarketing campaign targeting cart abandoners.',
+    result: 'In 90 days: ROAS grew from 1.6× to 4.2×. CPC dropped by 38%. Monthly conversions increased from ~600 to 2,400+.',
+    stats: [['4.2×','ROAS'],['-38%','CPC'],['+300%','Conversions'],['$180K','Revenue Generated']]
+  },
+  {
+    tag: 'SaaS · Search Campaigns', title: 'B2B SaaS: 65% Lower CPL via Search',
+    challenge: 'A SaaS company was spending $8,000/month with a CPL of $85 — well above their $30 target. Broad match keywords were burning budget on irrelevant traffic.',
+    solution: 'Migrated to phrase/exact match keywords, rewrote all ad copy with strong USPs, added ad extensions, and built a dedicated landing page for each ad group.',
+    result: 'CPL dropped from $85 to $29.75 (-65%). CPC fell to $1.80. Monthly qualified leads increased from 95 to 340.',
+    stats: [['-65%','CPL'],['$1.80','CPC'],['340','Monthly Leads'],['3.6×','Lead Volume']]
+  },
+  {
+    tag: 'Healthcare · Local Services', title: 'Clinic: 3× Patient Bookings via Local Ads',
+    challenge: 'A multi-specialty clinic in Dhaka had minimal online presence and relied entirely on walk-ins. Zero Google Ads history.',
+    solution: 'Launched Google Local Services Ads alongside Search campaigns. Set up call tracking, optimized for phone call conversions, and targeted a 10km radius.',
+    result: 'Patient bookings increased 3× within the first month. CPL settled at $12. Impression share reached 94%.',
+    stats: [['3×','Bookings'],['$12','CPL'],['94%','Impression Share'],['#1','Avg. Position']]
+  },
+  {
+    tag: 'Real Estate · Performance Max', title: 'Real Estate: 280% Lead Surge with PMax',
+    challenge: 'A real estate developer was generating ~40 leads/month at $95 CPL. Budget was $5,000/month with diminishing returns.',
+    solution: 'Launched a Performance Max campaign with strong creative assets (images, videos, headlines). Segmented audiences by property type and price range. Added audience signals from past converters.',
+    result: '280% increase in monthly leads (40 → 150+). CPL dropped to $28. ROAS reached 5.1×.',
+    stats: [['+280%','Leads'],['$28','CPL'],['5.1×','ROAS'],['150+','Monthly Leads']]
+  },
+  {
+    tag: 'App Install · UAC', title: 'App Growth: 10K+ Installs at $0.60 CPI',
+    challenge: 'A fintech app needed to scale installs rapidly while maintaining quality users (Day 7 retention target: 40%+).',
+    solution: 'Built a Google Universal App Campaign with creative variations for different audience segments. Optimized for in-app actions (account setup) rather than raw installs.',
+    result: '10,000+ installs in 60 days at $0.60 CPI. D7 retention reached 42%. Users from Google Ads had 2× higher LTV vs other channels.',
+    stats: [['10K+','Installs'],['$0.60','CPI'],['42%','D7 Retention'],['2×','LTV vs Others']]
+  },
+  {
+    tag: 'EdTech · Remarketing', title: 'EdTech: 5× Enrollment via Remarketing',
+    challenge: 'An online learning platform had a 2% enrollment rate. 98% of visitors left without converting. No remarketing in place.',
+    solution: 'Built a full remarketing funnel with RLSA campaigns: site visitors (soft CTA) → course page viewers (direct CTA) → cart abandoners (discount offer). Paired with YouTube pre-roll ads.',
+    result: 'Enrollment rate rose from 2% to 18% for remarketing audiences. CPA dropped to $8. Total enrollments 5× in 3 months.',
+    stats: [['5×','Enrollments'],['18%','CVR'],['$8','CPA'],['16pt','CVR Lift']]
+  }
+];
+
+function openProject(i) {
+  const p = projects[i];
+  document.getElementById('pModalContent').innerHTML = `
+    <div style="font-size:0.78rem;color:var(--cyan);font-family:var(--font-mono);letter-spacing:2px;margin-bottom:0.8rem">// CASE STUDY</div>
+    <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;font-family:var(--font-mono)">${p.tag}</div>
+    <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:1.5rem">${p.title}</h2>
+    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      ${p.stats.map(s=>`<div style="flex:1;min-width:80px;background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);border-radius:8px;padding:0.6rem;text-align:center"><div style="font-family:var(--font-display);font-size:1.4rem;color:var(--purple-light)">${s[0]}</div><div style="font-size:0.7rem;color:var(--muted)">${s[1]}</div></div>`).join('')}
+    </div>
+    <div style="margin-bottom:1rem"><div style="font-size:0.78rem;color:var(--accent);letter-spacing:1px;font-family:var(--font-mono);margin-bottom:0.4rem">THE CHALLENGE</div><p style="color:var(--muted);font-size:0.9rem;line-height:1.8">${p.challenge}</p></div>
+    <div style="margin-bottom:1rem"><div style="font-size:0.78rem;color:var(--accent);letter-spacing:1px;font-family:var(--font-mono);margin-bottom:0.4rem">MY APPROACH</div><p style="color:var(--muted);font-size:0.9rem;line-height:1.8">${p.solution}</p></div>
+    <div style="margin-bottom:1.5rem"><div style="font-size:0.78rem;color:var(--accent);letter-spacing:1px;font-family:var(--font-mono);margin-bottom:0.4rem">THE RESULTS</div><p style="color:var(--muted);font-size:0.9rem;line-height:1.8">${p.result}</p></div>
+    <button class="btn-primary" onclick="closeModal('projectModal'); scrollToSection('contact')">Work With Me →</button>
+  `;
+  openModal('projectModal');
+}
+
+// ─── CONTACT FORM ───
+async function submitForm() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname') ? document.getElementById('lname').value.trim() : '';
+  const femail = document.getElementById('femail').value.trim();
+  const fmessage = document.getElementById('fmessage').value.trim();
+
+  if (!fname || !femail || !fmessage) {
+    alert('Please fill in all required fields (Name, Email, Message).');
+    return;
+  }
+  const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailReg.test(femail)) { alert('Please enter a valid email address.'); return; }
+
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending...'; btn.classList.add('loading');
+
+  try {
+    const res = await fetch('https://formspree.io/f/xeevbgwj', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: fname + (lname ? ' ' + lname : ''),
+        email: femail,
+        message: fmessage
+      })
+    });
+
+    if (res.ok) {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      btn.textContent = 'Send Message';
+      btn.classList.remove('loading');
+      alert('Something went wrong. Please try again.');
+    }
+  } catch (err) {
+    btn.textContent = 'Send Message';
+    btn.classList.remove('loading');
+    alert('Network error. Please check your connection and try again.');
+  }
+}
+
+
+</script>
+</body>
+</html>
